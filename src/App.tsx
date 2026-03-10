@@ -85,7 +85,7 @@ function App() {
                 <Route path="/" element={<DevStart />} />
                 <Route path="/v1/*" element={<SmartProductTagEditLayout />} />
                 <Route path="/v2/*" element={<SmartProductTagEditLayoutV2 />} />
-                <Route path="/v2-0-generated/*" element={<SmartProductTagEditLayoutV2Gen />} />
+                <Route path="/v3/*" element={<SmartProductTagEditLayoutV2Gen />} />
             </Routes>
         </Router>
     );

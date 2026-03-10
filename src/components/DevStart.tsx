@@ -50,7 +50,7 @@ function DevStart() {
                     V2
                 </Link>
                 <Link
-                    to="/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f"
+                    to="/v3/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f"
                     style={{
                         padding: '12px 32px',
                         background: '#fff',
@@ -63,7 +63,7 @@ function DevStart() {
                         cursor: 'pointer',
                     }}
                 >
-                    V2 – 0 generated
+                    V3
                 </Link>
             </div>
         </div>

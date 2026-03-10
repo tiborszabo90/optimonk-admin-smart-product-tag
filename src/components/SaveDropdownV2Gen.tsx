@@ -34,7 +34,7 @@ import PrimaryButton from './PrimaryButton.tsx'
                     <PrimaryButton
                         className="save-dropdown-trigger btn btn-primary design-system"
                         label="Mentés"
-                        navigateRoutes={JSON.stringify(["/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2", "/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3"])}
+                        navigateRoutes={JSON.stringify(["/v3/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2", "/v3/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3"])}
                         showChevron={true}
                     />
                     {isOpen && (
