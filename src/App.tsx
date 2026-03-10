@@ -3,6 +3,7 @@ import type { JSX } from 'react/jsx-runtime'
 
 import SmartProductTagEditLayout from './components/SmartProductTagEditLayout.tsx'
 import SmartProductTagEditLayoutV2 from './components/SmartProductTagEditLayoutV2.tsx'
+import SmartProductTagEditLayoutV2Gen from './components/SmartProductTagEditLayoutV2Gen.tsx'
 import DevStart from './components/DevStart.tsx'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -84,6 +85,7 @@ function App() {
                 <Route path="/" element={<DevStart />} />
                 <Route path="/v1/*" element={<SmartProductTagEditLayout />} />
                 <Route path="/v2/*" element={<SmartProductTagEditLayoutV2 />} />
+                <Route path="/v2-0-generated/*" element={<SmartProductTagEditLayoutV2Gen />} />
             </Routes>
         </Router>
     );

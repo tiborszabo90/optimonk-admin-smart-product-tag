@@ -49,6 +49,22 @@ function DevStart() {
                 >
                     V2
                 </Link>
+                <Link
+                    to="/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f"
+                    style={{
+                        padding: '12px 32px',
+                        background: '#fff',
+                        border: '2px solid #e3e5e8',
+                        borderRadius: '8px',
+                        fontSize: '16px',
+                        fontWeight: 600,
+                        color: '#23262a',
+                        textDecoration: 'none',
+                        cursor: 'pointer',
+                    }}
+                >
+                    V2 – 0 generated
+                </Link>
             </div>
         </div>
     )
