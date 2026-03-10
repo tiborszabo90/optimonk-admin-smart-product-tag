@@ -1,4 +1,7 @@
 {
   "buildCommand": "npm run build",
-  "installCommand": "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install --ignore-scripts"
+  "installCommand": "npm install",
+  "env": {
+    "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": "1"
+  }
 }
