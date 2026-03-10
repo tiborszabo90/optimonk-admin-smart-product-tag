@@ -1,5 +1,5 @@
 import React from 'react'
-import { UilAngleLeft, UilAngleRight } from '@iconscout/react-unicons'
+import { UilAngleLeft, UilAngleRight, UilExclamationCircle } from '@iconscout/react-unicons'
 
 
         type Preview = {
@@ -22,11 +22,13 @@ import { UilAngleLeft, UilAngleRight } from '@iconscout/react-unicons'
         function ProductPanelV2Gen({
             dataId,
             onSelectionChange,
-            generatedCount = 0
+            generatedCount = 0,
+            hasModified = false
         }: {
             dataId: string;
             onSelectionChange?: (count: number) => void;
             generatedCount?: number;
+            hasModified?: boolean;
         }) {
             const { previews }: ProductPanelData = getProductPanelData(dataId);
             const [selectedIds, setSelectedIds] = React.useState<Set<number>>(new Set());
@@ -60,6 +62,7 @@ import { UilAngleLeft, UilAngleRight } from '@iconscout/react-unicons'
                                     subHeadline4={preview.subHeadline4}
                                     headline4={preview.headline4}
                                     generated={index < generatedCount}
+                                    stale={index < generatedCount && hasModified}
                                     onToggle={(selected) => handleToggle(index, selected)}
                                 />
                             );
@@ -81,6 +84,7 @@ import { UilAngleLeft, UilAngleRight } from '@iconscout/react-unicons'
             subHeadline4,
             headline4,
             generated = false,
+            stale = false,
             onToggle
         }: {
             title: string;
@@ -90,6 +94,7 @@ import { UilAngleLeft, UilAngleRight } from '@iconscout/react-unicons'
             subHeadline4: string;
             headline4: string;
             generated?: boolean;
+            stale?: boolean;
             onToggle?: (selected: boolean) => void;
         }) {
             const [selected, setSelected] = React.useState(false);
@@ -123,11 +128,17 @@ import { UilAngleLeft, UilAngleRight } from '@iconscout/react-unicons'
                     {generated && (
                         <>
                             <div style={{ borderTop: '1px solid #e3e5e8', margin: '10px 0' }} />
+                            {stale && (
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px', padding: '6px 8px', borderRadius: '4px', background: '#f1f2f4', fontSize: '12px', color: '#8c939f' }}>
+                                    <UilExclamationCircle size={16} color="#8c939f" style={{ flexShrink: 0 }} />
+                                    <span>Elavult tartalom</span>
+                                </div>
+                            )}
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                                <div style={{ fontSize: '13px', color: '#8c939f', fontWeight: 500 }}>headline4</div>
-                                <div style={{ fontSize: '14px', color: '#23262a', marginBottom: '6px' }}>{headline4}</div>
-                                <div style={{ fontSize: '13px', color: '#8c939f', fontWeight: 500 }}>subHeadline4</div>
-                                <div style={{ fontSize: '14px', color: '#23262a' }}>{subHeadline4}</div>
+                                <div style={{ fontSize: '13px', color: stale ? '#c5c9d0' : '#8c939f', fontWeight: 500 }}>headline4</div>
+                                <div style={{ fontSize: '14px', color: stale ? '#c5c9d0' : '#23262a', marginBottom: '6px' }}>{headline4}</div>
+                                <div style={{ fontSize: '13px', color: stale ? '#c5c9d0' : '#8c939f', fontWeight: 500 }}>subHeadline4</div>
+                                <div style={{ fontSize: '14px', color: stale ? '#c5c9d0' : '#23262a' }}>{subHeadline4}</div>
                             </div>
                         </>
                     )}

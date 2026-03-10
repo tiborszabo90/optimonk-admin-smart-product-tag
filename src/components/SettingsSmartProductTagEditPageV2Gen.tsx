@@ -50,9 +50,9 @@ import PanelHeader from './PanelHeader.tsx'
                                         switch (location.pathname + location.search + location.hash) {
                                             case "/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f":
                                             case "/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3":
-                                                return <SaveDropdownV2Gen isOpen={false} selectedCount={selectedCount} generatedCount={generatedCount} hasModified={hasModified} onGenerate10={() => setGeneratedCount(10)} />;
+                                                return <SaveDropdownV2Gen isOpen={false} selectedCount={selectedCount} generatedCount={generatedCount} hasModified={hasModified} onGenerate10={() => { setGeneratedCount(10); setHasModified(false); }} />;
                                             case "/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2":
-                                                return <SaveDropdownV2Gen isOpen={true} selectedCount={selectedCount} generatedCount={generatedCount} hasModified={hasModified} onGenerate10={() => setGeneratedCount(10)} />;
+                                                return <SaveDropdownV2Gen isOpen={true} selectedCount={selectedCount} generatedCount={generatedCount} hasModified={hasModified} onGenerate10={() => { setGeneratedCount(10); setHasModified(false); }} />;
                                             default:
                                                 return null;
                                         }
@@ -74,7 +74,7 @@ import PanelHeader from './PanelHeader.tsx'
                                 </div>
                                 <div data-v-716c1e5e={""} className={"preview-panel"}>
                                     <PanelHeader />
-                                    <ProductPanelV2Gen dataId="0" onSelectionChange={setSelectedCount} generatedCount={generatedCount} />
+                                    <ProductPanelV2Gen dataId="0" onSelectionChange={setSelectedCount} generatedCount={generatedCount} hasModified={hasModified} />
                                 </div>
                             </div>
                         </div>
