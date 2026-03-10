@@ -1,0 +1,6 @@
+.vue-js-switch.locale-toggle .v-switch-button { background-image: url("images/4833bd64-4d5b-46a0-be16-b3b7db17e916.svg"); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% center; z-index: 1; }
+.vue-js-switch.locale-toggle .v-switch-label.v-left { color: rgb(255, 255, 255) !important; }
+.vue-js-switch.locale-toggle.toggled { border: 1px solid rgb(213, 216, 221); }
+.vue-js-switch.locale-toggle.toggled .v-switch-button { background-image: url("images/94b1bd0f-f68d-4288-8e3d-c96f98d8f351.svg"); }
+.vue-js-switch.locale-toggle.toggled .v-switch-label.v-left { color: rgb(158, 162, 166) !important; }
+.vue-js-switch.locale-toggle.toggled .v-switch-core { background-color: rgb(241, 242, 244) !important; }

@@ -1,0 +1,9 @@
+.separator-line { -webkit-writing-mode: vertical-rl; writing-mode: vertical-rl; text-orientation: upright; }
+.separator-line--vertical { height: 100%; border-color: transparent; }
+.separator-line--vertical.separator-line--gray { border-left-color: rgb(227, 229, 232); }
+.separator-line--vertical.separator-line--orange { border-left-color: rgb(255, 239, 229); }
+.separator-line--horizontal { width: 100%; border-color: transparent; }
+.separator-line--horizontal.separator-line--gray { border-top-color: rgb(227, 229, 232); }
+.separator-line--horizontal.separator-line--orange { border-top-color: rgb(255, 239, 229); }
+.separator-line--solid { border-style: solid; }
+.separator-line--dashed { border-style: dashed; }
