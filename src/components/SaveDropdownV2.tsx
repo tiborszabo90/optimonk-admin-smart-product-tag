@@ -6,10 +6,10 @@ import Stacked_coins_light_gray from './icons/Stacked_coins_light_gray.tsx'
 import PrimaryButton from './PrimaryButton.tsx'
 
 
-    
+
 // Component
 
-        function SaveDropdown({
+        function SaveDropdownV2({
             isOpen = false,
             selectedCount = 0
         }: {
@@ -21,7 +21,7 @@ import PrimaryButton from './PrimaryButton.tsx'
                     <PrimaryButton
                         className="save-dropdown-trigger btn btn-primary design-system"
                         label="Mentés"
-                        navigateRoutes={JSON.stringify(["/v1/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2", "/v1/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3"])}
+                        navigateRoutes={JSON.stringify(["/v2/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2", "/v2/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3"])}
                         showChevron={true}
                     />
                     {isOpen && (
@@ -56,7 +56,7 @@ import PrimaryButton from './PrimaryButton.tsx'
                 </div>
             );
         }
-    
+
 
 // Subcomponents
 
@@ -83,4 +83,4 @@ import PrimaryButton from './PrimaryButton.tsx'
         }
 
 
-export default SaveDropdown
+export default SaveDropdownV2

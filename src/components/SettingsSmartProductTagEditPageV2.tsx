@@ -9,15 +9,15 @@ import CreditsSummary from './CreditsSummary.tsx'
 import TagMetaInfo from './TagMetaInfo.tsx'
 import LastUpdated from './LastUpdated.tsx'
 import SideSubNav from './SideSubNav.tsx'
-import SaveDropdown from './SaveDropdown.tsx'
-import InstructionsPanel from './InstructionsPanel.tsx'
+import SaveDropdownV2 from './SaveDropdownV2.tsx'
+import InstructionsPanelV2 from './InstructionsPanelV2.tsx'
 import ProductPanel from './ProductPanel.tsx'
 import PanelHeader from './PanelHeader.tsx'
 
 
 // Component
 
-        function SettingsSmartProductTagEditPage() {
+        function SettingsSmartProductTagEditPageV2() {
             const location = useLocation();
             const [selectedCount, setSelectedCount] = React.useState(0);
 
@@ -46,11 +46,11 @@ import PanelHeader from './PanelHeader.tsx'
                                     <CreditsSummary perProductCredits={9} availableCredits={880} />
                                     {(() => {
                                         switch (location.pathname + location.search + location.hash) {
-                                            case "/v1/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f":
-                                            case "/v1/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3":
-                                                return <SaveDropdown isOpen={false} selectedCount={selectedCount} />;
-                                            case "/v1/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2":
-                                                return <SaveDropdown isOpen={true} selectedCount={selectedCount} />;
+                                            case "/v2/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f":
+                                            case "/v2/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3":
+                                                return <SaveDropdownV2 isOpen={false} selectedCount={selectedCount} />;
+                                            case "/v2/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2":
+                                                return <SaveDropdownV2 isOpen={true} selectedCount={selectedCount} />;
                                             default:
                                                 return null;
                                         }
@@ -65,7 +65,7 @@ import PanelHeader from './PanelHeader.tsx'
                             </div>
                             <div data-v-716c1e5e={""} className={"panel-container"}>
                                 <div data-v-716c1e5e={""} className={"d-flex flex-column"}>
-                                    <InstructionsPanel />
+                                    <InstructionsPanelV2 />
                                 </div>
                                 <div data-v-716c1e5e={""} className={"arrow-vector"}>
                                     <Img id="8" />
@@ -80,6 +80,6 @@ import PanelHeader from './PanelHeader.tsx'
                 </div>
             );
         }
-    
 
-export default SettingsSmartProductTagEditPage
+
+export default SettingsSmartProductTagEditPageV2

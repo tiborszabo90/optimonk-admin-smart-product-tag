@@ -2,8 +2,10 @@ import React from 'react'
 import type { JSX } from 'react/jsx-runtime'
 
 import SmartProductTagEditLayout from './components/SmartProductTagEditLayout.tsx'
+import SmartProductTagEditLayoutV2 from './components/SmartProductTagEditLayoutV2.tsx'
+import DevStart from './components/DevStart.tsx'
 
-import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function pushPath(path: string) {
   window.history.pushState(null, '', '' + path);
@@ -75,25 +77,13 @@ document.addEventListener(
     true // capture phase == onClickCapture-ish
 );
 
-function AppContent() {
-    const location = useLocation();
-
-    return (
-        
-                <SmartProductTagEditLayout />
-            
-    );
-}
-
 function App() {
-    const validRoutes = ["/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f","/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2","/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3"]
-    const defaultRoute = "/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f";
-
     return (
         <Router>
             <Routes>
-                {defaultRoute !== '/' && <Route path="/" element={<Navigate to={defaultRoute} replace />} />}
-                <Route path="*" element={<AppContent />} />
+                <Route path="/" element={<DevStart />} />
+                <Route path="/v1/*" element={<SmartProductTagEditLayout />} />
+                <Route path="/v2/*" element={<SmartProductTagEditLayoutV2 />} />
             </Routes>
         </Router>
     );
