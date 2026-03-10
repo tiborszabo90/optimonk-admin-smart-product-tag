@@ -49368,7 +49368,7 @@ function SaveDropdownV2Gen({
       {
         className: "save-dropdown-trigger btn btn-primary design-system",
         label: "Mentés",
-        navigateRoutes: JSON.stringify(["/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2", "/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3"]),
+        navigateRoutes: JSON.stringify(["/v3/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2", "/v3/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3"]),
         showChevron: true
       }
     ),
@@ -49666,13 +49666,13 @@ function SettingsSmartProductTagEditPageV2Gen() {
           /* @__PURE__ */ jsxRuntimeExports.jsx(CreditsSummary, { perProductCredits: 9, availableCredits: 880 }),
           (() => {
             switch (location.pathname + location.search + location.hash) {
-              case "/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f":
-              case "/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3":
+              case "/v3/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f":
+              case "/v3/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=3":
                 return /* @__PURE__ */ jsxRuntimeExports.jsx(SaveDropdownV2Gen, { isOpen: false, selectedCount, generatedCount, hasModified, onGenerate10: () => {
                   setGeneratedCount(10);
                   setHasModified(false);
                 } });
-              case "/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2":
+              case "/v3/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f?step=2":
                 return /* @__PURE__ */ jsxRuntimeExports.jsx(SaveDropdownV2Gen, { isOpen: true, selectedCount, generatedCount, hasModified, onGenerate10: () => {
                   setGeneratedCount(10);
                   setHasModified(false);
@@ -49822,7 +49822,7 @@ function DevStart() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         Link,
         {
-          to: "/v2-0-generated/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f",
+          to: "/v3/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f",
           style: {
             padding: "12px 32px",
             background: "#fff",
@@ -49834,7 +49834,7 @@ function DevStart() {
             textDecoration: "none",
             cursor: "pointer"
           },
-          children: "V2 – 0 generated"
+          children: "V3"
         }
       )
     ] })
@@ -49901,7 +49901,7 @@ function App() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(DevStart, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/v1/*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SmartProductTagEditLayout, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/v2/*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SmartProductTagEditLayoutV2, {}) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/v2-0-generated/*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SmartProductTagEditLayoutV2Gen, {}) })
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/v3/*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SmartProductTagEditLayoutV2Gen, {}) })
   ] }) });
 }
 
