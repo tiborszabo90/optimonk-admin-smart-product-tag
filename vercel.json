@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "installCommand": "npm install",
+  "installCommand": "npm install --legacy-peer-deps",
   "env": {
     "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": "1"
   }
