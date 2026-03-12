@@ -17,7 +17,7 @@ import DesignSystemButton from './DesignSystemButton.tsx'
 
 // Component
 
-        function InstructionsPanelV2Gen({ onModify }: { onModify?: () => void }) {
+        function InstructionsPanelV4Img({ onModify }: { onModify?: () => void }) {
             return (
                 <div data-v-716c1e5e={""} className={"instructions-panel"} onChange={onModify}>
                     <div data-v-716c1e5e={""} className={"panel-header"}>
@@ -65,6 +65,16 @@ import DesignSystemButton from './DesignSystemButton.tsx'
                                     buttonClassName="btn btn-secondary design-system"
                                     label="Speciális beállítások"
                                 />
+                                <div data-v-716c1e5e={""} className={"preview-button-wrapper ml-2"}>
+                                    <DesignSystemButton
+                                        buttonClassName="orange-secondary-preview btn btn-secondary design-system"
+                                        label="Előnézet"
+                                    />
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '4px', marginTop: '6px', fontSize: '12px', color: '#8c939f' }}>
+                                <Stacked_coins_light_gray />
+                                20 termék / 40 kredit
                             </div>
                         </div>
                         <div data-v-716c1e5e={""} className={"footer-info"}>
@@ -91,4 +101,4 @@ import DesignSystemButton from './DesignSystemButton.tsx'
         }
 
 
-export default InstructionsPanelV2Gen
+export default InstructionsPanelV4Img

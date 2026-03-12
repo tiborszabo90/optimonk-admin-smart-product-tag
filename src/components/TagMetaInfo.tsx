@@ -6,14 +6,16 @@ import { useLocation } from 'react-router-dom'
 
 // Component
 
-        function TagMetaInfo() {
+        function TagMetaInfo({ hasModified = false }: { hasModified?: boolean }) {
             return (
                 <div data-v-716c1e5e={""} className={"text-left"}>
                     <div data-v-716c1e5e={""} className={"text-left d-flex align-items-center mb-1"}>
-                        <Chip
-                            wrapperClass={"chip chip-sm design-system chip-gray"}
-                            label={"Szöveg Gpt 4o"}
-                        />
+                        {hasModified && (
+                            <Chip
+                                wrapperClass={"chip chip-sm design-system chip-gray"}
+                                label={"Mentetlen módosítások"}
+                            />
+                        )}
                         <Chip
                             wrapperClass={"chip status-chip chip-sm design-system chip-primary ml-2"}
                             label={"Használatra kész"}

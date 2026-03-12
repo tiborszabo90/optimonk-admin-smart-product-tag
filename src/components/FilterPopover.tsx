@@ -49,7 +49,7 @@ function FilterPopover() {
                 className={"custom-btn"}
                 onClick={() => setIsOpen(prev => !prev)}
             >
-                <UilFilter size={24} />
+                <UilFilter size={24} color="#505763" />
             </button>
             {isOpen && (
                 <div data-v-716c1e5e={""} className={"filter-popover-menu"}>

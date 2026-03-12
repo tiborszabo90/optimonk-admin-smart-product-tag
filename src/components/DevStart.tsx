@@ -18,22 +18,6 @@ function DevStart() {
             </h1>
             <div style={{ display: 'flex', gap: '16px' }}>
                 <Link
-                    to="/v1/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f"
-                    style={{
-                        padding: '12px 32px',
-                        background: '#fff',
-                        border: '2px solid #e3e5e8',
-                        borderRadius: '8px',
-                        fontSize: '16px',
-                        fontWeight: 600,
-                        color: '#23262a',
-                        textDecoration: 'none',
-                        cursor: 'pointer',
-                    }}
-                >
-                    V1
-                </Link>
-                <Link
                     to="/v2/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f"
                     style={{
                         padding: '12px 32px',
@@ -64,6 +48,38 @@ function DevStart() {
                     }}
                 >
                     V3
+                </Link>
+                <Link
+                    to="/v4/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f"
+                    style={{
+                        padding: '12px 32px',
+                        background: '#fff',
+                        border: '2px solid #e3e5e8',
+                        borderRadius: '8px',
+                        fontSize: '16px',
+                        fontWeight: 600,
+                        color: '#23262a',
+                        textDecoration: 'none',
+                        cursor: 'pointer',
+                    }}
+                >
+                    V4
+                </Link>
+                <Link
+                    to="/v4-img/53722/settings/smart-product-tag-edit/699edcbfdb8587b4c75fa42f"
+                    style={{
+                        padding: '12px 32px',
+                        background: '#fff',
+                        border: '2px solid #e3e5e8',
+                        borderRadius: '8px',
+                        fontSize: '16px',
+                        fontWeight: 600,
+                        color: '#23262a',
+                        textDecoration: 'none',
+                        cursor: 'pointer',
+                    }}
+                >
+                    V4-img
                 </Link>
             </div>
         </div>
